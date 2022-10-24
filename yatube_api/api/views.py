@@ -3,18 +3,16 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import mixins, viewsets
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
-from rest_framework.permissions import (IsAuthenticated,
-                                        IsAuthenticatedOrReadOnly, )
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from api.permissions import IsOwnerOrAuthorizedOrReadOnly
 from api.serializers import (CommentSerializer, FollowSerializer,
                              GroupSerializer, PostSerializer, )
-from posts.models import Follow, Group, Post
+from posts.models import Group, Post
 
 
-class GetPostViewSet(mixins.CreateModelMixin,
-                    mixins.ListModelMixin,
-                    viewsets.GenericViewSet):
+class GetPostViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
+                     viewsets.GenericViewSet):
     pass
 
 
