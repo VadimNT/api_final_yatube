@@ -54,7 +54,7 @@ python3 manage.py runserver
 
 Пример ответа:
 
-```
+```json
 {
   "count": 123,
   "next": "http://api.example.org/accounts/?offset=400&limit=100",
