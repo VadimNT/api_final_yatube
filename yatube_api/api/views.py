@@ -5,15 +5,11 @@ from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
+from api.mixins import GetPostViewSet
 from api.permissions import IsOwnerOrAuthorizedOrReadOnly
 from api.serializers import (CommentSerializer, FollowSerializer,
                              GroupSerializer, PostSerializer, )
 from posts.models import Group, Post
-
-
-class GetPostViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
-                     viewsets.GenericViewSet):
-    pass
 
 
 class PostViewSet(viewsets.ModelViewSet):
