@@ -46,7 +46,7 @@ python3 manage.py runserver
 ```
 
 ##### После запуска проекта, документация будет доступна по адресу:
-```http://localhost:port/redoc/```
+```http://localhost:8000/redoc/```
 
 ### Примеры запросов и ответов. 
 
@@ -72,7 +72,7 @@ python3 manage.py runserver
 }
 ```
 Выполнение POST запроса постов .../api/v1/posts/ 
-```
+```json
 {
   "text": "string",
   "image": "string",
@@ -80,7 +80,7 @@ python3 manage.py runserver
 }
 ``` 
 Пример ответа: 
-```
+```json
 {
   "id": 0,
   "author": "string",
@@ -93,7 +93,7 @@ python3 manage.py runserver
 ##### Получение всех комментариев к публикации через GET запрос .../api/v1/posts/{post_id}/comments/ 
 
 Пример ответа: 
-```
+```json
 [
   {
     "id": 0,
@@ -108,7 +108,7 @@ python3 manage.py runserver
 
 Пример ответа: 
 
-```
+```json
 {
   "id": 0,
   "author": "string",
@@ -120,7 +120,7 @@ python3 manage.py runserver
 ##### Получение информации о сообществе по id через GET запрос .../api/v1/groups/id/ 
 
 Пример ответа: 
-```
+```json
 {
   "id": 0,
   "title": "string",
@@ -131,7 +131,7 @@ python3 manage.py runserver
 ##### GET-запрос возвращает все подписки пользователя, сделавшего запрос GET .../api/v1/follow/
 
 Пример ответа: 
-```
+```json
 [
   {
     "user": "string",
@@ -143,7 +143,7 @@ python3 manage.py runserver
 
 Пример ответа: 
 
-```
+```json
 {
   "user": "string",
   "following": "string"
