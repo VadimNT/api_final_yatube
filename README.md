@@ -6,7 +6,7 @@
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-https://github.com/boreesych/kittygram_backend.git
+https://github.com/VadimNT/api_final_yatube.git
 ```
 
 ```
